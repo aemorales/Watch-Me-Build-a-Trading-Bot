@@ -7,7 +7,7 @@ services:
       - ./config.js:/usr/src/app/config.js
     links:
       - redis
-#      - postgresql
+      - mongodb
     environment:
      - HOST
      - PORT
@@ -24,6 +24,13 @@ services:
     image: redis:latest
     volumes:
       - ./volumes/redis:/data
+  mongodb:
+    image: mongo
+    container_name: "mongodb"
+    volumes:
+      - ./volumes/mongo:/data/db
+    ports:
+    - "27017:27017"
 ## optionally uncomment if you wish to use nginx as a frontend
 #  nginx:
 #    restart: always
