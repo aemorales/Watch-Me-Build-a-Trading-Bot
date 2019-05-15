@@ -248,7 +248,7 @@ config.redisBeacon = {
 
 config.slack = {
   enabled: true,
-  token: 'xoxp-341894794373-341760746162-368130129095-41a219275157c0214483853884abe9a8',
+  token: '',
   sendMessageOnStart: true,
   muteSoft: true,
   channel: 'crypotobot' // #tradebot
